@@ -67,12 +67,12 @@ char	*ft_strjoin(char *src1, char *src2)
 	result = malloc(sizeof(*result) * len);
 	if (result == NULL)
 		return (NULL);
-	while (c < (int)ft_strlen(src1))
+	while (src1 && src1[c])
 	{
 		result[c] = src1[c];
 		c++;
 	}
-	while (c < (int)(ft_strlen(src1) + ft_strlen(src2)))
+	while (src2 && src2[d])
 		result[c++] = src2[d++];
 	result[c] = '\0';
 	free(src1);
